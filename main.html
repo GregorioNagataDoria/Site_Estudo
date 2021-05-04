@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo Site</title>
+    <link rel="stylesheet" href="stilo.css">
+</head>
+<body>
+    <script src="ajudante.js"></script>
+    <div class="topbar">
+        <a href="home" class="active"> Home </a>
+        <a href="html.html"> HTML</a>
+        <a href="css.html"> CSS</a>
+        <a href="js.html"> Javascript</a>
+    </div>
+<br><br><br><br><br><br>
+<div class="starting">
+    
+    <header><b id="r">Exemplo do que é possível com as três linguagens</b></header>
+    <!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'calculadora')">Calculadora</button>
+  <button class="tablinks" onclick="openCity(event, 'velha')">Jogo da Velha</button>
+  <button class="tablinks" onclick="openCity(event, '1')">1</button>
+</div>
+
+
+
+
+
+
+<!--  Calculadora  -->
+<div id="calculadora" class="tabcontent">
+  <div class="grid-container">
+    <div class="grid-item result"><b id="result"></b></div>
+    <div class="grid-item " onclick="on_off()">ON/OFF</div>
+    <div class="grid-item" onclick="getnumber(1)">1</div>
+    <div class="grid-item" onclick="getnumber(2)">2</div>  
+    <div class="grid-item" onclick="getnumber(3)">3</div>
+    <div class="grid-item" onclick="plus()">+</div>
+    <div class="grid-item" onclick="getnumber(4)">4</div>
+    <div class="grid-item" onclick="getnumber(5)">5</div>  
+    <div class="grid-item" onclick="getnumber(6)">6</div>
+    <div class="grid-item minus" onclick="minus()">-</div>
+    <div class="grid-item" onclick="getnumber(7)">7</div>
+    <div class="grid-item" onclick="getnumber(8)">8</div>  
+    <div class="grid-item" onclick="getnumber(9)">9</div>
+    <div class="grid-item times" onclick="times()">X</div>  
+    <div class="grid-item" onclick="getnumber(0)">0</div>  
+    <div class="grid-item divide" onclick="divide()">/</div>
+    <div class="grid-item equals" onclick="equals()">=</div>
+  </div>
+</div>
+
+<!-- Jogo da Velha   -->
+
+
+
+
+
+
+
+<div id="velha" class="tabcontent">
+  
+    <div class="grid-container2">
+      <div class="grid-item2 " id="topl"> X</div>
+      <div class="grid-item2" id="topm">O</div>
+      <div class="grid-item2" id="topr">X</div>
+      <div class="grid-item2" id="midl">O</div>
+      <div class="grid-item2" id="midm">X</div>
+      <div class="grid-item2" id="midr">O</div>
+      <div class="grid-item2" id="lowl">X</div>
+      <div class="grid-item2" id="lowm">O</div>
+      <div class="grid-item2" id="lowr">X</div>
+  
+  
+    </div>
+  
+  
+</div>
+
+<div id="1" class="tabcontent">
+  <h3>1</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+</div>   
+
+</body>
+</html>

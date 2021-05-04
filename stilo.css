@@ -1,0 +1,241 @@
+
+.topbar{    background-color: rgb(49, 49, 49);
+            overflow: hidden;
+            width:  100%;
+            height: 65px;
+            border-radius: 1px 1px 10px 10px; 
+            position: absolute;left:0;top:0 ;}
+
+
+.topbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 30px;
+    text-decoration: none;}
+
+.topbar a:hover{color:rgba(255, 251, 2, 0.753)}
+
+.topbar a.active {color:rgb(255, 251, 0);}
+
+body{
+    background-color: rgb(62, 201, 206);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+
+.starting{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.678);
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    text-align: center;
+    
+    
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+
+.grid-container {
+  
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: rgb(206, 206, 206);
+    height: 40%;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+  }
+
+
+.result {grid-column-start: 1;
+          grid-column-end: 4; 
+         
+        }
+
+#result {float: left;
+padding-left: 10px;}
+
+.divide{grid-column-start: 4;}
+
+.equals{grid-column-start: 2;
+        grid-row-start: 5;
+        grid-column-end: 4;
+}
+
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 30px;
+  border-radius: 5px;
+  margin: 5px;
+  font-family: fantasy;
+  color: rgba(0, 0, 0, 0.781);
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.grid-container2 {
+  
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: rgb(0, 0, 0);
+  height: 40%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+.grid-container2 > div {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px ;
+  font-size: 60px;
+  border-radius: 0px;
+  
+  margin-bottom: -10px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  font-family: fantasy;
+  color: rgb(0, 0, 0);
+ ;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+#topl{
+
+  margin-bottom: 12px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: 17px;
+  
+
+}
+
+#topm{
+
+  margin-bottom: 12px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: 17px;
+  
+
+}
+
+#topr{
+
+  margin-bottom: 12px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  
+
+}
+
+#midl{
+
+  margin-bottom: 12px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: 17px;
+  
+
+}
+
+#midr{
+
+  margin-bottom: 12px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: -17px;
+  
+
+}
+
+#midm{
+
+  margin-bottom: 12px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: 17px;
+  
+
+}
+
+#lowl{
+
+  margin-bottom: -12px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: 17px;
+  
+
+}
+
+#lowm{
+
+  margin-bottom: -12px;
+  margin-top: -10px;
+  margin-left: -15px;
+  margin-right: 17px;
+  
+
+}
