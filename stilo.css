@@ -239,3 +239,14 @@ padding-left: 10px;}
   
 
 }
+
+.menu_velha{float: left;}
+
+
+.começar{
+  height: 100px;
+  width: 300px;
+  font-size: 60px;
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.76);
+  border-radius: 2px;
+}

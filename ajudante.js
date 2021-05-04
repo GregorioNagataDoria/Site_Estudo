@@ -44,15 +44,7 @@ document.getElementById('result').innerHTML = ''
 return operator,first, second
 
 
-
 }
-
-
-
-
-
-
-
 
 
 function getnumber(num){
@@ -125,7 +117,29 @@ if(operator == '/'){
 
 }
 
+//----------------------------------------------------------------------
 
 
 
-//}
+
+
+
+
+
+
+
+
+
+// Jogo da Velha -------------------------------------------------------------------------------------
+
+var moeda = ''
+
+function velha_inicio(){
+
+moeda = Math.floor(Math.random() * 2);
+
+if(moeda == 1){window.alert('é 1 ')}
+if(moeda == 0){window.alert('é 0 ')}
+return moeda
+
+}
