@@ -132,14 +132,74 @@ if(operator == '/'){
 
 // Jogo da Velha -------------------------------------------------------------------------------------
 
-var moeda = ''
+var usados = []
+
+var tudo =  ['topl','topm','topr','midl','midm','midr','lowl','lowm','lowr']
+
+var moeda = '3'
+
+var primeiro = ''
 
 function velha_inicio(){
 
+  
+
+for(i = 0 ; i < (tudo.length ); i++){
+  document.getElementById(tudo[i]).innerHTML = ''
+
+}
+
+
+
+
+
+
+
 moeda = Math.floor(Math.random() * 2);
 
-if(moeda == 1){window.alert('é 1 ')}
-if(moeda == 0){window.alert('é 0 ')}
+if(moeda == 1){
+  //window.alert('é 1 ') 
+document.getElementById('jogador_primeiro').style.visibility= 'visible';
+document.getElementById('escolha_jogador').style.visibility= 'visible';
+}
+
+
+if(moeda == 0){
+  //window.alert('é 0 ')
+document.getElementById('bot_primeiro').style.visibility= 'visible';
+primeiro = 'bot'
+return primeiro
+}
 return moeda
 
 }
+
+
+function ordem(n){
+
+ if(n == 'bot'){primeiro = 'bot'} 
+ else{primeiro = 'jogador'}
+
+}
+
+if(primeiro = 'bot'){
+
+var jogada_bot = Math.floor(Math.random() * 9) 
+
+usados.push(tudo[jogada_bot])
+
+//window.alert('os usados são ' + usados)
+
+
+
+}
+
+
+
+
+
+
+
+
+
+

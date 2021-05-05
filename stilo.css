@@ -161,7 +161,7 @@ padding-left: 10px;}
 }
 
 #topl{
-
+  min-height: 69px;
   margin-bottom: 12px;
   margin-top: -10px;
   margin-left: -15px;
@@ -171,7 +171,7 @@ padding-left: 10px;}
 }
 
 #topm{
-
+  min-height: 69px;
   margin-bottom: 12px;
   margin-top: -10px;
   margin-left: -15px;
@@ -181,7 +181,7 @@ padding-left: 10px;}
 }
 
 #topr{
-
+  min-height: 69px;
   margin-bottom: 12px;
   margin-top: -10px;
   margin-left: -15px;
@@ -191,7 +191,7 @@ padding-left: 10px;}
 }
 
 #midl{
-
+  min-height: 69px;
   margin-bottom: 12px;
   margin-top: -10px;
   margin-left: -15px;
@@ -201,7 +201,7 @@ padding-left: 10px;}
 }
 
 #midr{
-
+  min-height: 69px;
   margin-bottom: 12px;
   margin-top: -10px;
   margin-left: -15px;
@@ -211,7 +211,7 @@ padding-left: 10px;}
 }
 
 #midm{
-
+  min-height: 69px;
   margin-bottom: 12px;
   margin-top: -10px;
   margin-left: -15px;
@@ -221,7 +221,7 @@ padding-left: 10px;}
 }
 
 #lowl{
-
+  min-height: 69px;
   margin-bottom: -12px;
   margin-top: -10px;
   margin-left: -15px;
@@ -231,7 +231,7 @@ padding-left: 10px;}
 }
 
 #lowm{
-
+  min-height: 69px;
   margin-bottom: -12px;
   margin-top: -10px;
   margin-left: -15px;
@@ -250,3 +250,22 @@ padding-left: 10px;}
   box-shadow: 7px 7px rgba(0, 0, 0, 0.76);
   border-radius: 2px;
 }
+
+
+#jogador_primeiro{
+
+visibility: hidden;
+
+}
+
+#bot_primeiro{
+
+  visibility: hidden;
+  
+  }
+
+  #escolha_jogador{
+
+    visibility: hidden;
+    
+    }

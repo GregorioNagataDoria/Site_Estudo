@@ -66,7 +66,15 @@
 
  <div class="menu_velha">
   
-  <button class="começar" onclick="velha_inicio()">Começar</button>
+  <button class="começar" id="começar1" onclick="velha_inicio()">Começar</button>
+  <br>
+  <p id="jogador_primeiro"> Voçê escolhe se vai primeiro ou segundo</p><p id="bot_primeiro">O computador vai primeiro</p>
+  <div id="escolha_jogador">
+    <button onclick="ordem('jogador')">Primeiro</button>
+    <button onclick="ordem('bot')">Segundo</button>
+    
+  </div>
+
 
  </div> 
 
