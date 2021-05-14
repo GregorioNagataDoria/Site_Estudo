@@ -15,21 +15,16 @@
         <a href="css.html"> CSS</a>
         <a href="js.html"> Javascript</a>
     </div>
-<br><br><br><br><br><br>
+<br><br><br><br>
 <div class="starting">
     
-    <header><b id="r">Exemplo do que é possível com as três linguagens</b></header>
+    
     <!-- Tab links -->
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'calculadora')">Calculadora</button>
   <button class="tablinks" onclick="openCity(event, 'velha')">Jogo da Velha</button>
-  <button class="tablinks" onclick="openCity(event, '1')">1</button>
+  <button class="tablinks" onclick="openCity(event, 'forca')">Jogo da Forca</button>
 </div>
-
-
-
-
-
 
 <!--  Calculadora  -->
 <div id="calculadora" class="tabcontent">
@@ -56,49 +51,50 @@
 
 <!-- Jogo da Velha   -->
 
-
-
-
-
-
-
 <div id="velha" class="tabcontent">
 
  <div class="menu_velha">
   
-  <button class="começar" id="começar1" onclick="velha_inicio()">Começar</button>
+  <button class="começar" id="começar1" onclick="velha_inicio()">Começar/Recomeçar</button>
   <br>
   <p id="jogador_primeiro"> Voçê escolhe se vai primeiro ou segundo</p><p id="bot_primeiro">O computador vai primeiro</p>
   <div id="escolha_jogador">
-    <button onclick="ordem('jogador')">Primeiro</button>
-    <button onclick="ordem('bot')">Segundo</button>
+    <button onclick="ordem('jogador')" id="b_primeiro">Primeiro</button>
+    <button onclick="ordem('bot')" id="b_segundo">Segundo</button>
     
   </div>
-
-
+<p id="igual">Espaço já Ocupado !!!</p>
+  
  </div> 
-
+ <div id="resultados">
+  
+ <p id="vitoria">Vitória !!! </p>
+ <br>
+ <p id="derrota">Derrota !!! </p>
+ <br>
+ <p id="empate">Empate !!! </p>
+ </div>
 
     <div class="grid-container2">
-      <div class="grid-item2 " id="topl" onclick="jogou('topl')">X</div>
-      <div class="grid-item2" id="topm" onclick="jogou('topm')">O</div>
-      <div class="grid-item2" id="topr" onclick="jogou('topr')">X</div>
-      <div class="grid-item2" id="midl" onclick="jogou('midl')">O</div>
-      <div class="grid-item2" id="midm" onclick="jogou('midm')">X</div>
-      <div class="grid-item2" id="midr" onclick="jogou('midr')">O</div>
-      <div class="grid-item2" id="lowl" onclick="jogou('lowl')">X</div>
-      <div class="grid-item2" id="lowm" onclick="jogou('lowm')">O</div>
-      <div class="grid-item2" id="lowr" onclick="jogou('lowr')">X</div>
+      <div class="grid-item2 " id="topl"onclick="jogou('topl')"></div>
+      <div class="grid-item2" id="topm" onclick="jogou('topm')"></div>
+      <div class="grid-item2" id="topr" onclick="jogou('topr')"></div>
+      <div class="grid-item2" id="midl" onclick="jogou('midl')"></div>
+      <div class="grid-item2" id="midm" onclick="jogou('midm')"></div>
+      <div class="grid-item2" id="midr" onclick="jogou('midr')"></div>
+      <div class="grid-item2" id="lowl" onclick="jogou('lowl')"></div>
+      <div class="grid-item2" id="lowm" onclick="jogou('lowm')"></div>
+      <div class="grid-item2" id="lowr" onclick="jogou('lowr')"></div>
   
   
     </div>
-  
+   
   
 </div>
 
-<div id="1" class="tabcontent">
-  <h3>1</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="Forca" class="tabcontent">
+  <h3>Forca</h3>
+  <p>Jogo da Forca</p>
 </div>
 </div>   
 

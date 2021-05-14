@@ -15,12 +15,12 @@
     font-size: 30px;
     text-decoration: none;}
 
-.topbar a:hover{color:rgba(255, 251, 2, 0.753)}
+.topbar a:hover{color:rgba(153, 245, 125, 0.788)}
 
-.topbar a.active {color:rgb(255, 251, 0);}
+.topbar a.active {color:rgb(43, 255, 0);}
 
 body{
-    background-color: rgb(62, 201, 206);
+    background-color: 	rgb(107, 91, 149);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
@@ -28,21 +28,23 @@ body{
 .starting{
     background-color: white;
     border-radius: 8px;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.678);
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.678);
     margin-top: 50px;
     margin-right: 20px;
     margin-left: 20px;
     padding: 10px;
     text-align: center;
-    
+    height: 600px;
+    width:95%
     
 }
 
 /* Style the tab */
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border: 3px solidrgb(255, 255, 255)c;
+    background-color: #ffffff;
+    
   }
   
   /* Style the buttons that are used to open the tab content */
@@ -54,24 +56,28 @@ body{
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    font-size: 20px;
   }
   
   /* Change background color of buttons on hover */
   .tab button:hover {
-    background-color: #ddd;
+    background-color: rgb(148, 219, 130);
+    border-radius: 5px;
   }
   
   /* Create an active/current tablink class */
   .tab button.active {
-    background-color: #ccc;
+    background-color: rgb(30, 216, 5);
+    border-radius: 5px;
   }
   
   /* Style the tab content */
   .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(255, 255, 255);
     border-top: none;
+    
   }
 
 
@@ -80,7 +86,7 @@ body{
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(202, 63, 63);
     height: 40%;
     width: 40%;
     margin-left: 30%;
@@ -90,16 +96,22 @@ body{
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.795);
+    
   }
 
 
-.result {grid-column-start: 1;
-          grid-column-end: 4; 
-         
+.result {
+  grid-column-start: 1;
+  grid-column-end: 4;
+      
         }
 
-#result {float: left;
-padding-left: 10px;}
+#result {
+float: left;
+padding-left: 10px;
+ 
+}
 
 .divide{grid-column-start: 4;}
 
@@ -114,26 +126,18 @@ padding-left: 10px;}
   text-align: center;
   padding: 15px 0;
   font-size: 30px;
-  border-radius: 5px;
+  border-radius: 9px;
   margin: 5px;
   font-family: fantasy;
-  color: rgba(0, 0, 0, 0.781);
+  color: rgb(0, 0, 0);
   border-radius: 3px;
   cursor: pointer;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 3px 3px rgb(0, 0, 0);
 }
 
 
-
-
-
-
-
-
-
 .grid-container2 {
-  
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
@@ -149,13 +153,10 @@ padding-left: 10px;}
   background-color: rgb(255, 255, 255);
   text-align: center;
   padding: 15px ;
-  
-  
-  
   font-size: 70px;
   color: rgb(0, 0, 0);
   cursor: pointer;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
 }
 
@@ -229,9 +230,11 @@ padding-left: 10px;}
 .começar{
   height: 100px;
   width: 300px;
-  font-size: 60px;
-  box-shadow: 7px 7px rgba(0, 0, 0, 0.76);
-  border-radius: 2px;
+  font-size: 30px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.76);
+  border-radius: 4px;
+  background-color: rgb(255, 242, 127);
+  cursor: pointer;
 }
 
 
@@ -250,5 +253,76 @@ visibility: hidden;
   #escolha_jogador{
 
     visibility: hidden;
-    
+    width: 300px;
+    height: 100px;
     }
+
+
+#vitoria{
+  visibility: hidden;
+  padding-right: 40px;
+  margin-bottom: -20px;
+  font-size: 50px;
+  color: rgb(11, 207, 11);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.596);
+
+}
+
+#derrota{
+  visibility: hidden;
+  padding-right: 40px;
+  font-size: 50px;
+  margin-bottom: -20px;
+  color: rgb(207, 11, 11);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.596);
+
+}
+
+#empate{
+
+  visibility: hidden;
+  font-size: 50px;
+  padding-right: 40px;
+  color: rgb(250, 184, 2);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.596);
+
+}
+
+#resultados{
+
+
+  float: right;
+  
+  height: 200px;
+}
+
+
+#b_primeiro{
+
+  height: 40px;
+  width: 120px;
+  font-size: 25px;
+  cursor: pointer;
+  color: rgba(112, 252, 112, 0.897);
+
+}
+
+#b_segundo{
+
+  height: 40px;
+  width: 120px;
+  font-size: 25px; 
+  cursor: pointer; 
+  color: rgb(255, 132, 132);
+
+
+}
+
+#igual{
+
+background-color: red;
+font-size: 40px;
+visibility: hidden;
+border-radius: 4px;
+
+}
