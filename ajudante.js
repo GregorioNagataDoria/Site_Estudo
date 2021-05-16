@@ -401,17 +401,15 @@ return vitoria,derrota
 }
 
 
+// Jogo da Forca ---------------------------------------------------------------------------------------------------------
 
-//setInterval(update, 500);
+letras = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-
-
-
-
-
-
-
-
+  function letra(event) {
+    var letra_code = event.which || event.keyCode;
+    document.getElementById("l").innerHTML = "The Unicode value is: " + letra_code;
+    console.log(letras[letra_code - 97] + 'ola')
+  }
 
 
 
@@ -423,4 +421,5 @@ return vitoria,derrota
 
 
 
-//if(midm1 == 'X' && topr1 == 'X' && document.getElementById('lowr').innerText != 'O'){document.getElementById('lowr').innerText = 'O'; bot_rodando = 3;update()}
+
+//  <input type="text" size="40" onkeypress="letra(event)">
