@@ -131,8 +131,6 @@ if(operator == '/'){
 // Jogo da Velha -------------------------------------------------------------------------------------
 
 
-
-
 var usados = []
 
 var turno = 1
@@ -403,15 +401,136 @@ return vitoria,derrota
 
 // Jogo da Forca ---------------------------------------------------------------------------------------------------------
 
-letras = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
-  function letra(event) {
-    var letra_code = event.which || event.keyCode;
-    document.getElementById("l").innerHTML = "The Unicode value is: " + letra_code;
-    console.log(letras[letra_code - 97] + 'ola')
+palavras = ['absurdo','retardado','galinha','planeta','esquilo','verdade']
+
+var palavra_cortada = []
+
+var vidas = 5
+
+var palavra = ''
+
+
+  function letra() {
+
+    console.log('a palavra é' + palavra)
+    var letra_certa = 0
+
+    var letra_entrada = document.getElementById('entrada').value
+    letra_entrada = letra_entrada.toLowerCase()
+    document.getElementById('entrada').value = ''
+    
+    for(var z = 0;z < palavra_cortada.length;z++){
+
+      if(letra_entrada == palavra_cortada[z]){
+       
+        z++
+       var ajuda = z.toString()
+      
+       document.getElementById('forca_espaço' + ajuda ).innerText = letra_entrada
+       letra_certa = 1
+        z--
+      
+      }
+    }
+
+    if(letra_certa == 1){console.log('acertou no minimo uma')}
+    else{perdeu_vida();}
+
+
+
   }
 
 
+  function nova_palavra(){
+  
+  vidas = 5
+
+ palavra = palavras[Math.floor(Math.random() * (palavras.length - 1))]
+  
+  
+   for(var t = 0; t < palavra.length ; t++){
+    var x = palavra.charAt(t)
+    palavra_cortada.push(x)
+
+    
+   }
+
+   for(var p = 0; p < palavra.length; p++){
+     p++
+    var ajuda2 = p.toString()
+    document.getElementById('forca_espaço' + ajuda2).innerText = '?'
+    p--
+
+   }
+ 
+
+
+
+    return palavra,vidas,palavra_cortada
+
+
+
+ }
+
+
+function adivinhou(){
+console.log(palavra +' e o guess é ' + document.getElementById('guess').value)
+  if(document.getElementById('guess').value == palavra){  
+  document.getElementById('vida1').src = 'vitoria.png'
+  document.getElementById('vida2').src = 'vitoria.png'
+  document.getElementById('vida3').src = 'vitoria.png'
+  document.getElementById('vida4').src = 'vitoria.png'
+  document.getElementById('vida5').src = 'vitoria.png'
+}
+
+
+}
+
+function perdeu_vida(){
+ 
+  vidas = vidas - 1
+
+if(vidas == 4){
+  document.getElementById('vida1').src = 'morto.png'
+  document.getElementById('vida2',).src = 'assustado.png'
+  document.getElementById('vida3',).src = 'assustado.png'
+  document.getElementById('vida4',).src = 'assustado.png'
+  document.getElementById('vida5',).src = 'assustado.png'
+    }
+
+if(vidas == 3){
+  document.getElementById('vida2',).src = 'morto.png'
+  document.getElementById('vida3',).src = 'mais_assustado.png'
+  document.getElementById('vida4',).src = 'mais_assustado.png'
+  document.getElementById('vida5',).src = 'mais_assustado.png'    
+}
+
+if(vidas == 2){
+
+  document.getElementById('vida3',).src = 'morto.png'
+  document.getElementById('vida4',).src = 'aterorizado.png'
+  document.getElementById('vida5',).src = 'aterorizado.png'    
+}
+
+if(vidas == 1){
+
+
+  document.getElementById('vida4',).src = 'morto.png'
+  document.getElementById('vida5',).src = 'depressivo.png'    
+}
+
+
+if(vidas == 0){
+
+  document.getElementById('vida5',).src = 'morto.png'
+
+}
+
+
+  return vidas
+
+}
 
 
 
@@ -419,7 +538,7 @@ letras = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r
 
 
 
-
-
-
-//  <input type="text" size="40" onkeypress="letra(event)">
+  //function letra(event) {
+ //   var letra_code = event.which || event.keyCode;
+  //  letra_code = letra_code - 97
+  //  console.log(letra_code

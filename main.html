@@ -94,17 +94,45 @@
 
 <div id="forca" class="tabcontent">
 
-  <button id="nova_palavra_button">Nova Palavra</button>
+<div id="topbar">
+
+  <button id="nova_palavra_button" onclick="nova_palavra()">Nova Palavra</button>
   <div id="entre"><h3 >Entre com sua tentativa ---></h3></div>
-  <input type="text" id="entrada">
+  <input type="text" id="entrada" oninput="letra()">
+
+
+  <div id="osdois">
+   <button  id="tentar" onclick="adivinhou()">Tentar adivinhar a palavra inteira:</button>
+  
+    <input type="text"  id="guess" >
+
+  </div>
+ 
 
 <div id="vidas">
-<img src="normal.png" alt="">
-<img src="normal.png" alt="">
-<img src="normal.png" alt="">
-<img src="normal.png "alt="">
-<img src="normal.png" alt="">
+<img src="normal.png" id="vida5">
+<img src="normal.png" id="vida4">
+<img src="normal.png" id="vida3">
+<img src="normal.png " id="vida2">
+<img src="normal.png" id="vida1" onclick="perdeu_vida()">
 </div>
+</div>
+
+<div id="forca_palavra">
+<div class="forca_grid" id="forca_espaço1"></div>
+<div class="forca_grid" id="forca_espaço2"></div>
+<div class="forca_grid" id="forca_espaço3"></div>
+<div class="forca_grid" id="forca_espaço4"></div>
+<div class="forca_grid" id="forca_espaço5"></div>
+<div class="forca_grid" id="forca_espaço6"></div>
+<div class="forca_grid" id="forca_espaço7"></div>
+<div class="forca_grid" id="forca_espaço8"></div>
+<div class="forca_grid" id="forca_espaço9"></div>
+<div class="forca_grid" id="forca_espaço10"></div>
+
+</div>
+
+
 
 <div >
 
