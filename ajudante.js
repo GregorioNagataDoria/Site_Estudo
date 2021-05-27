@@ -119,6 +119,29 @@ if(operator == '/'){
 
 }
 
+
+function cor(choice){
+
+if(choice != 'random'){
+document.getElementById('calcgrid').style.backgroundColor = choice
+}
+
+else{
+
+ var pri = Math.floor(Math.random() * 256);  
+ var seg = Math.floor(Math.random() * 256);  
+ var ter = Math.floor(Math.random() * 256);  
+
+
+ document.getElementById('calcgrid').style.backgroundColor = 'rgb(' + pri + ',' + seg + ',' + ter + ')';
+
+}
+
+}
+
+
+
+
 //----------------------------------------------------------------------
 
 
@@ -404,47 +427,135 @@ return vitoria,derrota
 
 palavras = ['absurdo','retardado','galinha','planeta','esquilo','verdade']
 
+var letras_usadas = []
+
 var palavra_cortada = []
 
 var vidas = 5
 
+var ja_usada = 'nao'
+
 var palavra = ''
 
+var total = 0
 
   function letra() {
 
-    console.log('a palavra é' + palavra)
+    ja_usada = 'nao'
+
     var letra_certa = 0
 
     var letra_entrada = document.getElementById('entrada').value
     letra_entrada = letra_entrada.toLowerCase()
     document.getElementById('entrada').value = ''
     
+    
+
+
+       
     for(var z = 0;z < palavra_cortada.length;z++){
 
-      if(letra_entrada == palavra_cortada[z]){
-       
+      for(var n = 0;n < letras_usadas.length;n++){ 
+     
+        if(letras_usadas[n] == letra_entrada){ja_usada = 'sim' ;break}
+          else{ja_usada = 'nao' ; }
+         }
+
+
+
+
+
+      if( letra_entrada == palavra_cortada[z] ){
+        
+
+
         z++
        var ajuda = z.toString()
-      
        document.getElementById('forca_espaço' + ajuda ).innerText = letra_entrada
+       
        letra_certa = 1
         z--
       
+        total = 0
+        for(var b = 0; b < palavra.length; b++){
+          b++
+          var ajuda3 = b.toString()
+          console.log('rodou uma vez' + total)
+          if(document.getElementById('forca_espaço' + ajuda3 ).innerText != '?'){total ++}
+          if(total == palavra.length){
+            document.getElementById('resultado_da_forca').style.visibility = 'visible'; 
+            document.getElementById('resultado_da_forca').innerText = 'Vitória'
+            document.getElementById('resultado_da_forca').style.color = 'rgb(62, 218, 15)'
+            document.getElementById('vida1').src = 'vitoria.png'
+            document.getElementById('vida2').src = 'vitoria.png'
+            document.getElementById('vida3').src = 'vitoria.png'
+            document.getElementById('vida4').src = 'vitoria.png'
+            document.getElementById('vida5').src = 'vitoria.png'
+            document.getElementById('forca_palavra').style.color = 'rgb(62, 218, 15)'
+          }
+            b--
+        }
+
+
+
+
+
       }
     }
 
+
+    if(ja_usada == 'nao'){
+      letras_usadas.push(letra_entrada)
+      console.log(letras_usadas.length)
+      if(letras_usadas.length == 1){
+        document.getElementById('letras_usadas_text').style.visibility = 'visible'
+        document.getElementById('letras_usadas_text').innerText += ' '+ letra_entrada + '  '
+      }
+      else{
+      document.getElementById('letras_usadas_text').style.visibility = 'visible'
+      document.getElementById('letras_usadas_text').innerText += ' , ' + letra_entrada + '  '
+      }
+      }
+
+
     if(letra_certa == 1){console.log('acertou no minimo uma')}
-    else{perdeu_vida();}
+    else{
+      
+      
+      perdeu_vida();}
 
+ 
 
-
+    return letras_usadas
   }
 
 
   function nova_palavra(){
   
+
+     letras_usadas = []
+
+     palavra_cortada = []
+
+     ja_usada = 'nao'
+
+     palavra = ''
+    
+     total = 0
+
+  document.getElementById('forca_palavra').style.color = 'black'
+    
+  document.getElementById('resultado_da_forca').style.visibility = 'hidden'; 
+
   vidas = 5
+
+  document.getElementById('vida1').src = 'normal.png'
+  document.getElementById('vida2',).src = 'normal.png'
+  document.getElementById('vida3',).src = 'normal.png'
+  document.getElementById('vida4',).src = 'normal.png'
+  document.getElementById('vida5',).src = 'normal.png'
+
+  document.getElementById('letras_usadas_text').innerText  = 'Letras Usadas:  '
 
  palavra = palavras[Math.floor(Math.random() * (palavras.length - 1))]
   
@@ -460,6 +571,8 @@ var palavra = ''
      p++
     var ajuda2 = p.toString()
     document.getElementById('forca_espaço' + ajuda2).innerText = '?'
+    document.getElementById('forca_espaço' + ajuda2).style.backgroundColor = 'rgba(172, 168, 168, 0.781)'
+    document.getElementById('forca_espaço' + ajuda2).style.borderRadius = '15px'
     p--
 
    }
@@ -475,13 +588,30 @@ var palavra = ''
 
 
 function adivinhou(){
-console.log(palavra +' e o guess é ' + document.getElementById('guess').value)
-  if(document.getElementById('guess').value == palavra){  
+
+  if(document.getElementById('guess').value == palavra){ 
+    
+  for(var l = 0;l < palavra.length;l++){
+
+    l++
+    var ajuda4 = l.toString()
+    document.getElementById('forca_espaço' + ajuda4 ).innerText = palavra[l - 1]
+    l--
+   
+
+  }
+
+
+
   document.getElementById('vida1').src = 'vitoria.png'
   document.getElementById('vida2').src = 'vitoria.png'
   document.getElementById('vida3').src = 'vitoria.png'
   document.getElementById('vida4').src = 'vitoria.png'
   document.getElementById('vida5').src = 'vitoria.png'
+  document.getElementById('resultado_da_forca').style.visibility = 'visible'; 
+  document.getElementById('resultado_da_forca').innerText = 'Vitória'
+  document.getElementById('resultado_da_forca').style.color = 'rgb(62, 218, 15)'
+  document.getElementById('forca_palavra').style.color = 'rgb(62, 218, 15)'
 }
 
 
@@ -524,6 +654,10 @@ if(vidas == 1){
 if(vidas == 0){
 
   document.getElementById('vida5',).src = 'morto.png'
+  document.getElementById('resultado_da_forca').style.visibility = 'visible'; 
+  document.getElementById('resultado_da_forca').innerText = 'Derrota'
+  document.getElementById('resultado_da_forca').style.color = 'rgb(209, 32, 32)'
+  document.getElementById('forca_palavra').style.color = 'rgb(209, 32, 32)'
 
 }
 
@@ -531,6 +665,13 @@ if(vidas == 0){
   return vidas
 
 }
+
+
+
+
+
+
+
 
 
 

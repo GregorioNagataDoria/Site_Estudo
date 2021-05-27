@@ -28,9 +28,38 @@
 
 <!--  Calculadora  -->
 <div id="calculadora" class="tabcontent">
-  <div class="grid-container">
+
+<div id="big">
+  <header id="escolha">Escolha Uma Cor !</header>
+  <div class="grid-container3">
+    
+    <div class="grid-item3" id="yellow" onclick="cor('yellow')"></div>
+    <div class="grid-item3" id="red" onclick="cor('red')"></div>
+    <div class="grid-item3" id="green" onclick="cor('green')"></div>
+
+    <div class="grid-item3" id="blue" onclick="cor('blue')"></div>
+    <div class="grid-item3" id="pink" onclick="cor('pink')"></div>
+    <div class="grid-item3" id="purple" onclick="cor('purple')"></div>
+
+    <div class="grid-item3" id="black" onclick="cor('black')"></div>
+    <div class="grid-item3" id="gray" onclick="cor('gray')"></div>
+    <div class="grid-item3" id="random" onclick="cor('random')">?</div>
+    
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="grid-container" id="calcgrid">
     <div class="grid-item result"><b id="result"></b></div>
-    <div class="grid-item " onclick="on_off()">ON/OFF</div>
+    <div class="grid-item " onclick="on_off()" id="onoff">ON/OFF</div>
     <div class="grid-item" onclick="getnumber(1)">1</div>
     <div class="grid-item" onclick="getnumber(2)">2</div>  
     <div class="grid-item" onclick="getnumber(3)">3</div>
@@ -132,7 +161,9 @@
 
 </div>
 
-
+<h2 id="letras_usadas_text">Letras Usadas : </h2>
+<br>
+<p id="resultado_da_forca"></p>
 
 <div >
 
